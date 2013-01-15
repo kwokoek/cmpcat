@@ -10,7 +10,7 @@ if [ ! -d "$results" ]; then
 fi
 
 echo "Run on person id $1"
-parent=$2_$1_results
+parent=$results/$2_$1_results
 if [ ! -d "$1" ]; then
     mkdir $parent
 fi
