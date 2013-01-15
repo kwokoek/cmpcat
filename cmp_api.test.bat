@@ -16,7 +16,7 @@ if [ ! -d "$1" ]; then
 fi
 
 basic=$3
-action=project_list
+action=project_list_invited
 echo "Running action $action"
 curl -v --header "Content-Type: application/json" --header "Authorization:Basic $basic" http://192.168.33.10:9001/$action>$parent/$action.json
 
@@ -28,7 +28,7 @@ action=project_list_pending
 echo "Running action $action"
 curl -v --header "Content-Type: application/json" --header "Authorization:Basic $basic" http://192.168.33.10:9001/$action>$parent/$action.json
 
-action=profile
+action=view_profile
 echo "Running action $action"
 curl -v --header "Content-Type: application/json" --header "Authorization:Basic $basic" http://192.168.33.10:9001/$action>$parent/$action.json
 
